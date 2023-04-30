@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ChartItAS" nsURI="http://www.example.org/ChartItAS" nsPrefix="ChartItAS">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Chart" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ChartType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="col" lowerBound="1" upperBound="-1"
+        eType="#//Col"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="#//Color"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loadData" upperBound="-1"
+        eType="#//Data" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chart" upperBound="-1"
+        eType="#//Chart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="col" upperBound="-1" eType="#//Col"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChartType">
+    <eLiterals name="Pie"/>
+    <eLiterals name="Bar" value="1"/>
+    <eLiterals name="Area" value="2"/>
+    <eLiterals name="Bubble" value="3"/>
+    <eLiterals name="Line" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Col" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Color">
+    <eLiterals name="Blue"/>
+    <eLiterals name="Red" value="1" literal="Red"/>
+    <eLiterals name="Green" value="2"/>
+    <eLiterals name="Orange" value="3"/>
+    <eLiterals name="Yellow" value="4"/>
+    <eLiterals name="Purple" value="5"/>
+    <eLiterals name="Black" value="6"/>
+    <eLiterals name="Brown" value="7"/>
+    <eLiterals name="Pink" value="8"/>
+    <eLiterals name="DarkGrey" value="9" literal="DarkGrey"/>
+    <eLiterals name="LightGrey" value="10"/>
+    <eLiterals name="White" value="11"/>
+  </eClassifiers>
+</ecore:EPackage>

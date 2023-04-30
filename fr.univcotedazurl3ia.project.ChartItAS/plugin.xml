@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ChartItAS -->
+      <package
+            uri="http://www.example.org/ChartItAS"
+            class="fr.univcotedazurl3ia.project.ChartItAS.ChartItASPackage"
+            genModel="model/ChartItAS.genmodel"/>
+   </extension>
+
+</plugin>

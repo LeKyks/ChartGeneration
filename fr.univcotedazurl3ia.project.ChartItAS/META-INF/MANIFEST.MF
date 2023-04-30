@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.univcotedazurl3ia.project.ChartItAS;singleton:=true
+Automatic-Module-Name: fr.univcotedazurl3ia.project.ChartItAS
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: fr.univcotedazurl3ia.project.ChartItAS,
+ fr.univcotedazurl3ia.project.ChartItAS.impl,
+ fr.univcotedazurl3ia.project.ChartItAS.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy
