@@ -1,0 +1,20 @@
+P:"cars and populations"
+{
+	loadData
+	{	
+		"donneecars"("C:/Users/pierr/Documents/L3IA/LangageEtCompilation/cars.csv"),
+		"donneefact"("C:/Users/pierr/Documents/L3IA/LangageEtCompilation/factbook.csv")
+	}
+	col
+	{
+		"Car"(label="Car",color=Black),
+		"Horsepower"(label="Horsepower",color=Red),
+		"Country"(label="Pays",color=Blue),
+		"Population"(label="Pop",color=Brown)
+	}
+	chart
+	{
+		"Horsepower by model"(data="donneecars",type=Line,col="Car","Horsepower",backgroundColor=White),
+		"Pop by coutry"(data="donneefact",type=Bar,col="Country","Population",backgroundColor=White)
+	}
+}
