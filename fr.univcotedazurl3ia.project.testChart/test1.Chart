@@ -1,0 +1,17 @@
+P:"Test à + de 2 colonnes"
+{
+	loadData
+	{	
+		"donneefact"("C:/Users/pierr/Documents/L3IA/LangageEtCompilation/factbook.csv")
+	}
+	col
+	{
+		"Unemployment rate(%)"(label="Taux de chomage",color=Blue),
+		"Total fertility rate(children born/woman)"(label="Taux de fertilité",color=LightGrey),
+		"Country"(label="Pays",color=Black)
+	}
+	chart
+	{
+		"Pop by coutry"(data="donneefact",type=Line,col="Country","Total fertility rate(children born/woman)","Unemployment rate(%)",backgroundColor=White)
+	}
+}
