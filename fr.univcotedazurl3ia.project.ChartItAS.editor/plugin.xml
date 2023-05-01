@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ChartItAS -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.univcotedazurl3ia.project.ChartItAS.presentation.ChartItASModelWizardID"
+            name="%_UI_ChartItASModelWizard_label"
+            class="fr.univcotedazurl3ia.project.ChartItAS.presentation.ChartItASModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ChartItASModelFile.gif">
+         <description>%_UI_ChartItASModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ChartItAS -->
+      <editor
+            id="fr.univcotedazurl3ia.project.ChartItAS.presentation.ChartItASEditorID"
+            name="%_UI_ChartItASEditor_label"
+            icon="icons/full/obj16/ChartItASModelFile.gif"
+            extensions="chartitas"
+            class="fr.univcotedazurl3ia.project.ChartItAS.presentation.ChartItASEditor"
+            contributorClass="fr.univcotedazurl3ia.project.ChartItAS.presentation.ChartItASActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
